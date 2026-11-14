@@ -264,7 +264,6 @@ ScanRepo-Guard/
 ├── SECURITY.md
 ├── LICENSE
 ├── .gitignore
-├── index.js
 └── package.json
 ```
 
@@ -274,7 +273,6 @@ ScanRepo-Guard/
 - **`CONTRIBUTING.md`** — Contribution guidelines.
 - **`SECURITY.md`** — Security policy and vulnerability reporting instructions.
 - **`package.json`** — Defines the npm package, dependencies, scripts, and CLI entry point.
-- **`index.js`** — Main Node.js package entry point.
 
 ## ⚠️ Important Security Notes
 
