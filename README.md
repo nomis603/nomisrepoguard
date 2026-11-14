@@ -15,6 +15,8 @@ Designed around the `AGENTS.md` instruction-file convention, ScanRepo-Guard is n
 ## ✨ Features
 
 - **Automatic security checks:** Scan external repositories before cloning, pulling, installing, or executing their code.
+- **Easy installation:** Install ScanRepo-Guard directly through npm using `npx`.
+- **Automatic AGENTS.md setup:** Automatically copies the security instructions into your current project directory.
 - **No local execution:** Uses ScanRepo's remote scanning approach instead of running repository code on your machine.
 - **Malware detection:** Checks for suspicious code patterns and potentially malicious behavior.
 - **Credential protection:** Looks for patterns associated with stealing passwords, browser data, SSH keys, and other sensitive information.
@@ -75,45 +77,92 @@ ScanRepo-Guard uses ScanRepo's exit codes to determine what happens next.
 
 ## 📦 Installation
 
+ScanRepo-Guard can be installed directly through npm using `npx`. This is the recommended installation method because it automatically installs the security instructions into your current project.
+
 ### Requirements
 
 Before installing ScanRepo-Guard, make sure you have:
 
+- [Node.js](https://nodejs.org/) version 18 or newer.
+- npm version 8 or newer.
 - An AI coding agent that supports `AGENTS.md` or equivalent project instructions.
-- [Node.js](https://nodejs.org/) and npm installed.
-- An internet connection to access ScanRepo.
-- Access to a terminal or command execution tool through your AI agent.
+- An internet connection.
+- Access to a terminal.
 
-You do not need to install ScanRepo globally. The `npx` command can fetch and run it when needed.
+### Option 1: Install using npx (Recommended)
 
-### Option 1: Project-level installation (Recommended)
+You do not need to manually download or copy the `AGENTS.md` file.
 
-This installation makes ScanRepo-Guard available within a specific project.
+1. Open your project's root directory in a terminal.
+2. Run:
 
-1. Open your project directory.
-2. Create an `AGENTS.md` file in the root of your project.
-3. Copy the contents of the ScanRepo-Guard `AGENTS.md` instruction file into it.
+```bash
+npx scanrepo-guard
+```
 
-Your project should look something like this:
+Alternatively, you can explicitly use the `init` command:
+
+```bash
+npx scanrepo-guard init
+```
+
+3. ScanRepo-Guard automatically copies its bundled `AGENTS.md` into your current working directory.
+
+Your project should now look something like this:
 
 ```text
 your-project/
-├── AGENTS.md
+├── AGENTS.md          # Automatically installed
 ├── README.md
-├── LICENSE
+├── package.json
 └── ...
 ```
 
 4. Open your project using an AI coding agent that supports `AGENTS.md`.
-5. The agent can now use the instructions when working inside that project.
+5. Your agent can now read and follow the ScanRepo-Guard security instructions.
 
-### Option 2: Global or personal installation
+**Important:** ScanRepo-Guard will not overwrite an existing `AGENTS.md` file. If one already exists, you will need to merge the instructions manually.
 
-If your AI coding agent supports global or personal instruction files, you can configure ScanRepo-Guard there to make it available across multiple projects.
+### Available CLI Commands
+
+| Command | Description |
+|---|---|
+| `npx scanrepo-guard` | Initializes ScanRepo-Guard in the current directory |
+| `npx scanrepo-guard init` | Initializes ScanRepo-Guard in the current directory |
+| `npx scanrepo-guard --help` | Displays available commands and usage information |
+| `npx scanrepo-guard --version` | Displays the installed package version |
+
+### Option 2: Install globally using npm
+
+You can also install ScanRepo-Guard globally:
+
+```bash
+npm install -g scanrepo-guard
+```
+
+Then initialize it in any project by running:
+
+```bash
+cd your-project
+scanrepo-guard init
+```
+
+This makes the CLI command available from your terminal without having to use `npx` every time.
+
+### Option 3: Manual installation
+
+If you prefer not to use npm:
+
+1. Download or clone the ScanRepo-Guard repository.
+2. Locate the `AGENTS.md` file.
+3. Copy its contents into an `AGENTS.md` file in your project's root directory.
+4. Open your project using an AI coding agent that supports `AGENTS.md`.
+
+### Global or Personal Agent Instructions
+
+If your AI coding agent supports global or personal instruction files, you can also configure ScanRepo-Guard there to make it available across multiple projects.
 
 The exact location depends on the AI coding agent you're using.
-
-For example, some agents support a personal instructions directory, while others require a custom configuration file or a dedicated rules directory.
 
 1. Find your AI agent's documentation for global or personal project instructions.
 2. Add the ScanRepo-Guard instructions to the appropriate location.
@@ -199,6 +248,34 @@ A successful scan does not guarantee that the repository is completely safe.
 
 *This is an illustrative example, not an actual scan result.*
 
+## 📁 Project Structure
+
+The ScanRepo-Guard repository is organized as follows:
+
+```text
+ScanRepo-Guard/
+│
+├── bin/
+│   └── cli.js
+│
+├── AGENTS.md
+├── README.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── LICENSE
+├── .gitignore
+├── index.js
+└── package.json
+```
+
+- **`bin/cli.js`** — Handles CLI commands and installs the bundled security instructions.
+- **`AGENTS.md`** — Contains the universal AI agent security instructions.
+- **`README.md`** — Project overview and installation documentation.
+- **`CONTRIBUTING.md`** — Contribution guidelines.
+- **`SECURITY.md`** — Security policy and vulnerability reporting instructions.
+- **`package.json`** — Defines the npm package, dependencies, scripts, and CLI entry point.
+- **`index.js`** — Main Node.js package entry point.
+
 ## ⚠️ Important Security Notes
 
 ScanRepo-Guard is designed to reduce the risk of interacting with malicious repositories, but no static analysis tool can detect every possible threat.
@@ -218,7 +295,7 @@ Keep the following in mind:
 
 - **AGENTS.md:** Provides universal-style project instructions for compatible AI coding agents.
 - **ScanRepo:** Performs remote static security analysis.
-- **Node.js / npm:** Provides access to the ScanRepo CLI through `npx`.
+- **Node.js / npm:** Powers the ScanRepo-Guard CLI and provides access to ScanRepo through `npx`.
 - **JSON:** Allows AI agents to interpret structured scan results.
 
 ## 📚 Useful Links
@@ -227,6 +304,7 @@ Keep the following in mind:
 - [ScanRepo CLI Documentation](https://www.scanrepo.dev/cli)
 - [AGENTS.md Documentation](https://agents.md/)
 - [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
 ## 🤝 Contributing
 
@@ -234,9 +312,15 @@ Contributions, suggestions, and improvements are welcome!
 
 If you find a bug, have an idea for a new security check, or want to improve the security workflow, feel free to open an issue or submit a pull request.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+## 🔒 Security
+
+If you discover a security vulnerability, please follow the reporting guidelines in [SECURITY.md](SECURITY.md).
+
 ## 📄 License
 
-Distributed under the **MIT License**. See the [LICENSE](https://github.com/nomis603/Testing/new/main) file for more information.
+Distributed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
 
 ---
 
