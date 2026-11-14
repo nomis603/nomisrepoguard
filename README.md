@@ -224,8 +224,7 @@ If you find a bug, have an idea for a new security check, or want to improve the
 
 ## 📄 License
 
-Choose and add a license for this project before distributing it. If you intend to make it open source, consider including a `LICENSE` file in the repository.
-
+Distributed under the **MIT License**. See the [LICENSE](https://github.com/nomis603/Testing/new/main) file for more information.
 ---
 
 **Stay curious. Scan before you clone. 🛡️**
