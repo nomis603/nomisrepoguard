@@ -5,12 +5,11 @@
   "description": "A universal AI agent security tool that scans external GitHub and Bitbucket repositories before cloning, installing, or executing their contents.",
   "main": "index.js",
   "bin": {
-    "scanrepo-guard": "./bin/scanrepo-guard.js"
+    "scanrepo-guard": "./bin/cli.js"
   },
   "scripts": {
     "start": "node index.js",
-    "test": "node --test",
-    "scan": "node ./bin/scanrepo-guard.js"
+    "test": "node --test"
   },
   "keywords": [
     "security",
