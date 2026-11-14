@@ -36,7 +36,6 @@
   },
   "files": [
     "bin/",
-    "index.js",
     "AGENTS.md",
     "README.md",
     "LICENSE",
