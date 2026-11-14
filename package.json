@@ -1,0 +1,49 @@
+```json
+{
+  "name": "scanrepo-guard",
+  "version": "1.0.0",
+  "description": "A universal AI agent security tool that scans external GitHub and Bitbucket repositories before cloning, installing, or executing their contents.",
+  "main": "index.js",
+  "bin": {
+    "scanrepo-guard": "./bin/scanrepo-guard.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test",
+    "scan": "node ./bin/scanrepo-guard.js"
+  },
+  "keywords": [
+    "security",
+    "scanrepo",
+    "scanrepo-guard",
+    "ai",
+    "ai-agents",
+    "coding-agents",
+    "agents-md",
+    "repository-security",
+    "github",
+    "bitbucket",
+    "malware-detection",
+    "static-analysis",
+    "npm",
+    "cli",
+    "developer-tools"
+  ],
+  "author": "nomis603",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "files": [
+    "bin/",
+    "index.js",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ]
+}
+```
