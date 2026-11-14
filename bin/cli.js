@@ -1,4 +1,3 @@
-```javascript
 #!/usr/bin/env node
 
 "use strict";
@@ -101,4 +100,3 @@ switch (command) {
         process.exitCode = 1;
         break;
 }
-```
