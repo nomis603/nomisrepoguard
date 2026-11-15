@@ -1,9 +1,9 @@
 {
-  "name": "scanrepo-guard",
+  "name": "Nomisrepoguard",
   "version": "1.0.0",
   "description": "A universal AI agent security tool that scans external GitHub and Bitbucket repositories before cloning, installing, or executing their contents.",
   "bin": {
-    "scanrepo-guard": "bin/cli.js"
+    "Nomisrepoguard": "bin/cli.js"
   },
   "scripts": {
     "test": "node --test"
@@ -11,7 +11,7 @@
   "keywords": [
     "security",
     "scanrepo",
-    "scanrepo-guard",
+    "Nomisrepoguard",
     "ai",
     "ai-agents",
     "coding-agents",
