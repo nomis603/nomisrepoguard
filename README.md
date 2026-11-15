@@ -1,21 +1,21 @@
-# 🛡️ ScanRepo-Guard
+# 🛡️ Nomisrepoguard
 
 **A universal security instruction system that helps AI coding agents check external GitHub and Bitbucket repositories before interacting with them.**
 
-GitHub repositories can easily contain malware and hidden vulnerabilities. However, there are very few developer tools or agent instruction systems designed to scan external repositories before developers interact with them. **ScanRepo-Guard** aims to bridge that gap.
+GitHub repositories can easily contain malware and hidden vulnerabilities. However, there are very few developer tools or agent instruction systems designed to scan external repositories before developers interact with them. **Nomisrepoguard** aims to bridge that gap.
 
-ScanRepo-Guard helps protect your development environment by scanning repositories for suspicious code, credential theft, data exfiltration, malicious dependencies, and other potential security threats.
+Nomisrepoguard helps protect your development environment by scanning repositories for suspicious code, credential theft, data exfiltration, malicious dependencies, and other potential security threats.
 
 Powered by [ScanRepo](https://www.scanrepo.dev/), it adds a security checkpoint to your repository workflow so you can make more informed decisions before cloning or running unfamiliar code.
 
-Designed around the `AGENTS.md` instruction-file convention, ScanRepo-Guard is not tied to a single AI provider, model, or coding assistant. It can be used by compatible AI coding agents that support repository-level instructions.
+Designed around the `AGENTS.md` instruction-file convention, nomisrepoguard is not tied to a single AI provider, model, or coding assistant. It can be used by compatible AI coding agents that support repository-level instructions.
 
 ---
 
 ## ✨ Features
 
 - **Automatic security checks:** Scan external repositories before cloning, pulling, installing, or executing their code.
-- **Easy installation:** Install ScanRepo-Guard directly through npm using `npx`.
+- **Easy installation:** Install nomisrepoguard directly through npm using `npx`.
 - **Automatic AGENTS.md setup:** Automatically copies the security instructions into your current project directory.
 - **No local execution:** Uses ScanRepo's remote scanning approach instead of running repository code on your machine.
 - **Malware detection:** Checks for suspicious code patterns and potentially malicious behavior.
@@ -28,7 +28,7 @@ Designed around the `AGENTS.md` instruction-file convention, ScanRepo-Guard is n
 
 ## 🔍 What Does It Check?
 
-ScanRepo-Guard focuses on six main security categories:
+Nomisrepoguard focuses on six main security categories:
 
 | Category | What it looks for |
 |---|---|
@@ -41,7 +41,7 @@ ScanRepo-Guard focuses on six main security categories:
 
 ## ⚙️ How It Works
 
-ScanRepo-Guard follows a simple security workflow:
+Nomisrepoguard follows a simple security workflow:
 
 1. **Repository detection:** The AI agent identifies when you're asking to inspect or interact with an external GitHub or Bitbucket repository.
 2. **Security scan:** It runs ScanRepo against the repository URL.
@@ -65,7 +65,7 @@ ScanRepo analyzes a remote repository snapshot. It does not clone the repository
 
 ## 🚦 Security Verdicts
 
-ScanRepo-Guard uses ScanRepo's exit codes to determine what happens next.
+Nomisrepoguard uses ScanRepo's exit codes to determine what happens next.
 
 | Exit Code | Verdict | Action |
 |---|---|---|
@@ -77,11 +77,11 @@ ScanRepo-Guard uses ScanRepo's exit codes to determine what happens next.
 
 ## 📦 Installation
 
-ScanRepo-Guard can be installed directly through npm using `npx`. This is the recommended installation method because it automatically installs the security instructions into your current project.
+Nomisrepoguard can be installed directly through npm using `npx`. This is the recommended installation method because it automatically installs the security instructions into your current project.
 
 ### Requirements
 
-Before installing ScanRepo-Guard, make sure you have:
+Before installing Nomisrepoguard, make sure you have:
 
 - [Node.js](https://nodejs.org/) version 18 or newer.
 - npm version 8 or newer.
@@ -97,16 +97,16 @@ You do not need to manually download or copy the `AGENTS.md` file.
 2. Run:
 
 ```bash
-npx scanrepo-guard
+npx Nomisrepoguard
 ```
 
 Alternatively, you can explicitly use the `init` command:
 
 ```bash
-npx scanrepo-guard init
+npx Nomisrepoguard init
 ```
 
-3. ScanRepo-Guard automatically copies its bundled `AGENTS.md` into your current working directory.
+3. Nomisrepoguard automatically copies its bundled `AGENTS.md` into your current working directory.
 
 Your project should now look something like this:
 
@@ -119,32 +119,32 @@ your-project/
 ```
 
 4. Open your project using an AI coding agent that supports `AGENTS.md`.
-5. Your agent can now read and follow the ScanRepo-Guard security instructions.
+5. Your agent can now read and follow the Nomisrepoguard security instructions.
 
-**Important:** ScanRepo-Guard will not overwrite an existing `AGENTS.md` file. If one already exists, you will need to merge the instructions manually.
+**Important:** Nomisrepoguard will not overwrite an existing `AGENTS.md` file. If one already exists, you will need to merge the instructions manually.
 
 ### Available CLI Commands
 
 | Command | Description |
 |---|---|
-| `npx scanrepo-guard` | Initializes ScanRepo-Guard in the current directory |
-| `npx scanrepo-guard init` | Initializes ScanRepo-Guard in the current directory |
-| `npx scanrepo-guard --help` | Displays available commands and usage information |
-| `npx scanrepo-guard --version` | Displays the installed package version |
+| `npx Nomisrepoguard` | Initializes Nomisrepoguard in the current directory |
+| `npx Nomisrepoguard init` | Initializes Nomisrepoguard in the current directory |
+| `npx Nomisrepoguard --help` | Displays available commands and usage information |
+| `npx Nomisrepoguard --version` | Displays the installed package version |
 
 ### Option 2: Install globally using npm
 
-You can also install ScanRepo-Guard globally:
+You can also install Nomisrepoguard globally:
 
 ```bash
-npm install -g scanrepo-guard
+npm install -g Nomisrepoguard
 ```
 
 Then initialize it in any project by running:
 
 ```bash
 cd your-project
-scanrepo-guard init
+Nomisrepoguard init
 ```
 
 This makes the CLI command available from your terminal without having to use `npx` every time.
@@ -153,19 +153,19 @@ This makes the CLI command available from your terminal without having to use `n
 
 If you prefer not to use npm:
 
-1. Download or clone the ScanRepo-Guard repository.
+1. Download or clone the Nomisrepoguard repository.
 2. Locate the `AGENTS.md` file.
 3. Copy its contents into an `AGENTS.md` file in your project's root directory.
 4. Open your project using an AI coding agent that supports `AGENTS.md`.
 
 ### Global or Personal Agent Instructions
 
-If your AI coding agent supports global or personal instruction files, you can also configure ScanRepo-Guard there to make it available across multiple projects.
+If your AI coding agent supports global or personal instruction files, you can also configure Nomisrepoguard there to make it available across multiple projects.
 
 The exact location depends on the AI coding agent you're using.
 
 1. Find your AI agent's documentation for global or personal project instructions.
-2. Add the ScanRepo-Guard instructions to the appropriate location.
+2. Add the Nomisrepoguard instructions to the appropriate location.
 3. Restart or reload the agent if required.
 4. Verify that the agent recognizes and follows the instructions.
 
@@ -173,7 +173,7 @@ The exact location depends on the AI coding agent you're using.
 
 ## 🚀 How to Use It
 
-Once installed, ScanRepo-Guard is designed to activate when a compatible AI agent detects that you're about to interact with an external repository.
+Once installed, Nomisrepoguard is designed to activate when a compatible AI agent detects that you're about to interact with an external repository.
 
 You can simply ask your AI agent to check a repository.
 
@@ -190,7 +190,7 @@ https://github.com/owner/repo-example
 **Expected workflow:**
 
 1. The AI agent detects the repository URL.
-2. ScanRepo-Guard runs the security scan.
+2. Nomisrepoguard runs the security scan.
 3. The agent analyzes the results.
 4. The agent reports the verdict and relevant findings.
 5. The agent determines whether further interaction is allowed.
@@ -207,7 +207,7 @@ Scan it first and make sure there are no obvious security risks:
 https://github.com/owner/repository
 ```
 
-ScanRepo-Guard should perform the security check before allowing the cloning workflow to continue.
+Nomisrepoguard should perform the security check before allowing the cloning workflow to continue.
 
 ### Example 3 — Scan a Bitbucket Repository
 
@@ -226,7 +226,7 @@ The same security workflow applies to supported public Bitbucket repositories.
 A successful scan might produce a report similar to this:
 
 ```text
-🛡️ ScanRepo-Guard Security Report
+🛡️ Nomisrepoguard Security Report
 
 Repository: github.com/owner/repository
 Scanner: ScanRepo
@@ -250,10 +250,10 @@ A successful scan does not guarantee that the repository is completely safe.
 
 ## 📁 Project Structure
 
-The ScanRepo-Guard repository is organized as follows:
+The Nomisrepoguard repository is organized as follows:
 
 ```text
-ScanRepo-Guard/
+Nomisrepoguard/
 │
 ├── bin/
 │   └── cli.js
@@ -276,7 +276,7 @@ ScanRepo-Guard/
 
 ## ⚠️ Important Security Notes
 
-ScanRepo-Guard is designed to reduce the risk of interacting with malicious repositories, but no static analysis tool can detect every possible threat.
+Nomisrepoguard is designed to reduce the risk of interacting with malicious repositories, but no static analysis tool can detect every possible threat.
 
 Keep the following in mind:
 
@@ -293,7 +293,7 @@ Keep the following in mind:
 
 - **AGENTS.md:** Provides universal-style project instructions for compatible AI coding agents.
 - **ScanRepo:** Performs remote static security analysis.
-- **Node.js / npm:** Powers the ScanRepo-Guard CLI and provides access to ScanRepo through `npx`.
+- **Node.js / npm:** Powers the Nomisrepoguard CLI and provides access to ScanRepo through `npx`.
 - **JSON:** Allows AI agents to interpret structured scan results.
 
 ## 📚 Useful Links
