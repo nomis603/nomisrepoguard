@@ -1,8 +1,8 @@
-# 🤝 Contributing to Nomisrepoguard
+# 🤝 Contributing to nomisrepoguard
 
-Thank you for your interest in contributing to **Nomisrepoguard**!
+Thank you for your interest in contributing to **nomisrepoguard**!
 
-Nomisrepoguard aims to make security scanning a standard part of working with external repositories. Contributions that improve security, reliability, documentation, and compatibility with AI coding agents are welcome.
+nomisrepoguard aims to make security scanning a standard part of working with external repositories. Contributions that improve security, reliability, documentation, and compatibility with AI coding agents are welcome.
 
 ## 🎯 Ways to Contribute
 
@@ -17,7 +17,7 @@ There are several ways you can help improve the project:
 
 ## 🚀 Getting Started
 
-1. Fork the Nomisrepoguard repository.
+1. Fork the nomisrepoguard repository.
 2. Clone your fork to your local machine.
 3. Create a new branch for your changes.
 4. Make your changes.
@@ -28,8 +28,8 @@ There are several ways you can help improve the project:
 Example:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Nomisrepoguard.git
-cd Nomisrepoguard
+git clone https://github.com/YOUR_USERNAME/nomisrepoguard.git
+cd nomisrepoguard
 
 git checkout -b feature/your-improvement
 ```
@@ -38,7 +38,7 @@ Replace the repository URL with the actual URL of your fork.
 
 ## 🔒 Security Guidelines
 
-Security is the primary focus of Nomisrepoguard. Contributions must respect the project's security principles.
+Security is the primary focus of nomisrepoguard. Contributions must respect the project's security principles.
 
 - Never introduce code that executes untrusted repository contents before scanning.
 - Do not weaken or bypass the security checks defined in `AGENTS.md` without a clear security justification.
@@ -133,7 +133,7 @@ Contributors are expected to be respectful, constructive, and welcoming.
 
 ## 🙌 Thank You
 
-Every contribution helps make Nomisrepoguard more useful and secure.
+Every contribution helps make nomisrepoguard more useful and secure.
 
 Whether you're reporting a bug, improving documentation, suggesting a feature, or contributing code, your help is appreciated.
 
