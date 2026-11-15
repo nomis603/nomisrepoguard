@@ -1,8 +1,8 @@
-# 🛡️ Nomisrepoguard
+# 🛡️ nomisrepoguard
 
 **Universal AI Agent Security Instructions**
 
-Nomisrepoguard is a security-first repository scanning workflow designed to protect developers and their environments from potentially malicious external repositories.
+nomisrepoguard is a security-first repository scanning workflow designed to protect developers and their environments from potentially malicious external repositories.
 
 Its purpose is simple:
 
@@ -10,7 +10,7 @@ Its purpose is simple:
 
 These instructions apply to any AI coding agent, autonomous development assistant, or coding environment that supports and reads `AGENTS.md` instructions.
 
-Nomisrepoguard uses [ScanRepo](https://www.scanrepo.dev/) to perform remote static security analysis on supported GitHub and Bitbucket repositories before interacting with their contents.
+nomisrepoguard uses [ScanRepo](https://www.scanrepo.dev/) to perform remote static security analysis on supported GitHub and Bitbucket repositories before interacting with their contents.
 
 ---
 
@@ -34,7 +34,7 @@ This security checkpoint must take place before cloning, pulling, downloading, i
 
 ## 2. 🚨 Trigger Conditions
 
-Activate Nomisrepoguard whenever the user:
+Activate nomisrepoguard whenever the user:
 
 - Provides a GitHub repository URL.
 - Provides a Bitbucket repository URL.
@@ -228,7 +228,7 @@ After each completed scan, provide a readable security report.
 Use this format:
 
 ```text
-🛡️ Nomisrepoguard Security Report
+🛡️ nomisrepoguard Security Report
 
 Repository: <REPOSITORY_URL>
 Scanner: ScanRepo
@@ -291,7 +291,7 @@ npx scanrepo https://github.com/owner/repository --json
 **Example successful response (illustrative only):**
 
 ```text
-🛡️ Nomisrepoguard Security Report
+🛡️ nomisrepoguard Security Report
 
 Repository: github.com/owner/repository
 Scanner: ScanRepo
@@ -320,7 +320,7 @@ This is an example report, not an actual security assessment.
 
 ## 9. ⚠️ Failure Handling and Limitations
 
-Nomisrepoguard is designed to reduce the risk of interacting with malicious repositories. However, static analysis cannot guarantee complete protection.
+nomisrepoguard is designed to reduce the risk of interacting with malicious repositories. However, static analysis cannot guarantee complete protection.
 
 The agent must follow these additional rules:
 
