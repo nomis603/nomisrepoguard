@@ -1,14 +1,14 @@
 # 🔒 Security Policy
 
-## 🛡️ ScanRepo-Guard
+## 🛡️ Nomisrepoguard
 
-Security is the core purpose of ScanRepo-Guard. We take security concerns seriously and appreciate responsible reports that help improve the project's protection, reliability, and trustworthiness.
+Security is the core purpose of Nomisrepoguard. We take security concerns seriously and appreciate responsible reports that help improve the project's protection, reliability, and trustworthiness.
 
-ScanRepo-Guard is designed to help AI coding agents assess external repositories before cloning, installing dependencies, or executing their contents.
+Nomisrepoguard is designed to help AI coding agents assess external repositories before cloning, installing dependencies, or executing their contents.
 
 ## 📢 Reporting a Security Vulnerability
 
-If you discover a security vulnerability in ScanRepo-Guard, please report it responsibly.
+If you discover a security vulnerability in Nomisrepoguard, please report it responsibly.
 
 When submitting a report, include:
 
@@ -28,7 +28,7 @@ Do not include passwords, API keys, access tokens, private keys, or other sensit
 
 The project focuses on reducing risks associated with interacting with unfamiliar external repositories.
 
-ScanRepo-Guard's security workflow considers six primary categories:
+Nomisrepoguard's security workflow considers six primary categories:
 
 | Category | Security Concerns |
 |---|---|
@@ -43,7 +43,7 @@ These categories describe areas of concern and do not guarantee that every threa
 
 ## 🚦 Security Principles
 
-ScanRepo-Guard follows these principles:
+Nomisrepoguard follows these principles:
 
 1. **Scan before you clone.** Assess unfamiliar repositories before cloning or downloading them.
 2. **Scan before you install.** Do not install dependencies from an untrusted repository before assessment.
@@ -55,7 +55,7 @@ ScanRepo-Guard follows these principles:
 
 ## ⚠️ Known Limitations
 
-ScanRepo-Guard is a security assistance tool, not a guarantee of complete protection.
+Nomisrepoguard is a security assistance tool, not a guarantee of complete protection.
 
 - Static analysis may fail to detect unknown, novel, or heavily obfuscated threats.
 - A successful scan does not prove that a repository is malware-free.
@@ -77,7 +77,7 @@ Security-related improvements may include:
 - Better handling of failed or inconclusive scans.
 - Documentation updates and compatibility improvements.
 
-Users should keep their local copy of ScanRepo-Guard and the ScanRepo CLI up to date.
+Users should keep their local copy of Nomisrepoguard and the ScanRepo CLI up to date.
 
 ## 🤝 Responsible Disclosure
 
@@ -87,7 +87,7 @@ Please allow maintainers reasonable time to investigate and address reported vul
 
 ## 📜 Supported Versions
 
-Security fixes are intended for the latest maintained version of ScanRepo-Guard.
+Security fixes are intended for the latest maintained version of Nomisrepoguard.
 
 Older copies may contain outdated instructions or security recommendations. Users are encouraged to use the latest version available in the official repository.
 
